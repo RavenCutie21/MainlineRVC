@@ -763,10 +763,10 @@ def change_f0_method(f0method8):
 
 
 with gr.Blocks(title="♡ RavenCutie21 UI") as app:
-    gr.Markdown("## ♡ RavenCutie21 UI")
+    gr.Markdown("<h1><center>♡ RavenCutie21 UI<h1>")
     gr.Markdown(
         value=i18n(
-            "This is a proof of concept by RavenCutie21 for making training easier for new users, while also removing unnecessary things that the end user would have downloaded themselves anyways, like UVR"
+            "<center>This is a proof of concept by RavenCutie21 for making training easier for new users, while also removing unnecessary things that the end user would have downloaded themselves anyways, like UVR"
         )
     )
     with gr.Tabs():
