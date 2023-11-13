@@ -8,4 +8,8 @@ some tooltips on the train tab have been changed, to be more user friendly, and 
 
 Grab both RavenUI.py and RavenUI.bat and place inside of your Mainline RVC folder. This will be updated over time, but tooltips will be basic for now, as I currently believe it's enough for newer users.
 
+If you trust my UI enough and don't think you need anything else, you can look at this image
+
+![RavenAssets](https://github.com/RavenCutie21/MainlineRVC/blob/main/assets folder.png)
+
 You can use this file anywhere else including colabs or your own forks, as long as you give credit.
