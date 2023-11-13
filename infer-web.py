@@ -1047,7 +1047,7 @@ with gr.Blocks(title="♡ RavenCutie21 UI") as app:
                 exp_dir1 = gr.Textbox(label=i18n("Name Your Voice Model"), value="test-model")
                 sr2 = gr.Radio(
                     label=i18n("Sample Rate"),
-                    choices=["40k", "48k"],
+                    choices=["40k", "48k", "32k"],
                     value="48k",
                     interactive=True,
                 )
@@ -1058,10 +1058,10 @@ with gr.Blocks(title="♡ RavenCutie21 UI") as app:
                     interactive=True,
                 )
                 version19 = gr.Radio(
-                    label=i18n("Version"),
-                    choices=["v1", "v2"],
+                    label=i18n("Version 2 only here. Sorry."),
+                    choices=["v2"],
                     value="v2",
-                    interactive=True,
+                    interactive=False,
                     visible=True,
                 )
                 np7 = gr.Slider(
