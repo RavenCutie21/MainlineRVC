@@ -6,6 +6,6 @@ As long as the date on that, doesn't exceed the date on the infer-web.py file, i
 
 some tooltips on the train tab have been changed, to be more user friendly, and or explain what to do for newer users. This is still a proof of concept at the end of the day.
 
-Remember to backup your infer-web.py file as a just in case. Using my file, opening the assets folder, you can make it match the screenshot located in this repo.
+Grab both RavenUI.py and RavenUI.bat and place inside of your Mainline RVC folder.
 
-You can use this file anywhere else, as long as you give credit.
+You can use this file anywhere else including colabs or your own forks, as long as you give credit.
