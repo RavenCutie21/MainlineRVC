@@ -10,6 +10,6 @@ Grab both RavenUI.py and RavenUI.bat and place inside of your Mainline RVC folde
 
 If you trust my UI enough and don't think you need anything else, you can look at this image
 
-![RavenAssets](https://github.com/RavenCutie21/MainlineRVC/blob/main/assets folder.png)
+![RavenAssets]("https://github.com/RavenCutie21/MainlineRVC/blob/main/assets folder.png")
 
 You can use this file anywhere else including colabs or your own forks, as long as you give credit.
