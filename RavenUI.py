@@ -766,7 +766,7 @@ with gr.Blocks(title="♡ RavenCutie21 UI") as app:
     gr.Markdown("<h1><center>♡ RavenCutie21 UI<h1>")
     gr.Markdown(
         value=i18n(
-            "<center>This is a proof of concept by RavenCutie21 for making training easier for new users, while also removing unnecessary things that the end user would have downloaded themselves anyways, like UVR"
+            "<center>RavenCutie21's modifications to remove things that aren't needed locally. (Potentially works on Colab too)"
         )
     )
     with gr.Tabs():
@@ -1040,7 +1040,7 @@ with gr.Blocks(title="♡ RavenCutie21 UI") as app:
         with gr.TabItem(i18n("训练")):
             gr.Markdown(
                 value=i18n(
-                    "Step 1: Refer to https://rentry.co/TrainingVoiceModels or any other guide you can find for processing your dataset, you can also follow along the steps from that same guide for training"
+                    "Step 1: https://rentry.co/TrainingVoiceModels is a guide that tells you the bare minimum for preparing a dataset"
                 )
             )
             with gr.Row():
@@ -1052,7 +1052,7 @@ with gr.Blocks(title="♡ RavenCutie21 UI") as app:
                     interactive=True,
                 )
                 if_f0_3 = gr.Radio(
-                    label=i18n("Pitch Guidance, required for singing, optional for speech"),
+                    label=i18n("Pitch Guidance, no reason to turn this off afaik"),
                     choices=[True, False],
                     value=True,
                     interactive=True,
@@ -1068,7 +1068,7 @@ with gr.Blocks(title="♡ RavenCutie21 UI") as app:
                     minimum=0,
                     maximum=config.n_cpu,
                     step=1,
-                    label=i18n("Leave default for local users"),
+                    label=i18n("Leave default for local users, max if somehow colab"),
                     value=int(np.ceil(config.n_cpu / 2.5)),
                     interactive=True,
                 )
@@ -1099,7 +1099,7 @@ with gr.Blocks(title="♡ RavenCutie21 UI") as app:
                         api_name="train_preprocess",
                     )
             with gr.Group():
-                gr.Markdown(value=i18n("step2b: take a screenshot of your 'model name' & 'sample rate' in case you want to retrain the model you are currently creating in the future, DO NOT RE-FEATURE EXTRACT IF CONTINUING TRAINING"))
+                gr.Markdown(value=i18n("step2b: take a screenshot of your 'model name' & 'sample rate' in case you want to continue training later, DO NOT RUN FEATURE EXTRACT IF CONTINUING TRAINING"))
                 with gr.Row():
                     with gr.Column():
                         gpus6 = gr.Textbox(
@@ -1114,7 +1114,7 @@ with gr.Blocks(title="♡ RavenCutie21 UI") as app:
                     with gr.Column():
                         f0method8 = gr.Radio(
                             label=i18n(
-                                "F0 rmvpe_gpu should always be used here, it is in fact the best option listed here, you are free to change, but for best results leave default"
+                                "F0 rmvpe_gpu should always be used here, it is in fact the best option listed here, you are free to change it but why would you"
                             ),
                             choices=["pm", "harvest", "dio", "rmvpe", "rmvpe_gpu"],
                             value="rmvpe_gpu",
@@ -1150,7 +1150,7 @@ with gr.Blocks(title="♡ RavenCutie21 UI") as app:
                         api_name="train_extract_f0_feature",
                     )
             with gr.Group():
-                gr.Markdown(value=i18n("step3: Fill in the training settings and start by training index first, then model training, REMEMBER screenshot what you set for total epochs & batch size if you want to continue training in the future. When continuing training you can change save frequency so you don't need to remember it"))
+                gr.Markdown(value=i18n("step3: Fill in the training settings and start by training index first, then model training, REMEMBER screenshot what you set for Batch Size (how many in a row need to have similarities to improve, rvc splits large files so yes this affects everyone) if you want to continue training this model in the future. When continuing training you can change save frequency & total epochs"))
                 with gr.Row():
                     save_epoch10 = gr.Slider(
                         minimum=1,
@@ -1164,7 +1164,7 @@ with gr.Blocks(title="♡ RavenCutie21 UI") as app:
                         minimum=2,
                         maximum=10000,
                         step=1,
-                        label=i18n("total epochs"),
+                        label=i18n("Total Epochs"),
                         value=750,
                         interactive=True,
                     )
@@ -1172,7 +1172,7 @@ with gr.Blocks(title="♡ RavenCutie21 UI") as app:
                         minimum=1,
                         maximum=32,
                         step=1,
-                        label=i18n("batch size, 4 8 or 16 is recommended"),
+                        label=i18n("batch size"),
                         value=default_batch_size,
                         interactive=True,
                     )
@@ -1184,7 +1184,7 @@ with gr.Blocks(title="♡ RavenCutie21 UI") as app:
                     )
                     if_cache_gpu17 = gr.Radio(
                         label=i18n(
-                            "Cache data to GPU, if 8gb of vram or less, never use this, as it will only slow training down"
+                            "Cache data to GPU, if 8gb of vram or less, never use this, as it will only slow training down, and only use if dataset is less than 10 minutes anyways"
                         ),
                         choices=[i18n("是"), i18n("否")],
                         value=i18n("否"),
