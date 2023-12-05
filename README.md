@@ -2,7 +2,7 @@
 
 Please download the latest mainline rvc prepackaged binary from here https://github.com/RVC-Project/Retrieval-based-Voice-Conversion-WebUI/releases
 
-you can download this repo as a zip, and extract it inside of your freshly installed mainlined RVC, and have my slimmed down UI, with better defaults.
+99.9999% translated, removed ton of changes, added 3 guide recommendations to the top, train tab default, and all defaults changed.
 
 
 
