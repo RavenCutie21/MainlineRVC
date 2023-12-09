@@ -845,7 +845,7 @@ with gr.Blocks(title="♡ RavenCutie21") as app:
                 sid0 = gr.Dropdown(label=i18n("Voice"), choices=sorted(names))
                 with gr.Column():
                     refresh_button = gr.Button(i18n("Refresh"), variant="primary")
-                    clean_button = gr.Button(i18n("Unload from Video Memory"), variant="primary")
+                    clean_button = gr.Button(i18n("Unload Voice from VRAM"), variant="primary")
                 spk_item = gr.Slider(
                     minimum=0,
                     maximum=2333,
@@ -863,7 +863,7 @@ with gr.Blocks(title="♡ RavenCutie21") as app:
                     with gr.Row():
                         with gr.Column():
                             vc_transform0 = gr.Number(
-                                label=i18n("Semitone Adjustment"),
+                                label=i18n("Transpose -12, 12 are octaves"),
                                 value=0
                             )
                             input_audio0 = gr.Textbox(
@@ -871,7 +871,7 @@ with gr.Blocks(title="♡ RavenCutie21") as app:
                                 placeholder="C:\\Users\\Desktop\\audio_example.wav",
                             )
                             file_index1 = gr.Textbox(
-                                label=i18n("Path to feature retrieval, if empty uses dropdown"),
+                                label=i18n("Path of index"),
                                 placeholder="C:\\Users\\Desktop\\model_example.index",
                                 interactive=True,
                             )
@@ -916,7 +916,7 @@ with gr.Blocks(title="♡ RavenCutie21") as app:
                             filter_radius0 = gr.Slider(
                                 minimum=0,
                                 maximum=7,
-                                label=i18n(">=3 uses the median filter for the results of harvest's pitch recognition"),
+                                label=i18n(">=3 apply median filter to the harvested pitch results"),
                                 value=3,
                                 step=1,
                                 interactive=True,
@@ -929,7 +929,7 @@ with gr.Blocks(title="♡ RavenCutie21") as app:
                                 interactive=True,
                             )
                             f0_file = gr.File(
-                                label=i18n("F0 curve file"),
+                                label=i18n("F0 curve file [optional]"),
                                 visible=False,
                             )
 
@@ -942,7 +942,7 @@ with gr.Blocks(title="♡ RavenCutie21") as app:
 
                 with gr.Group():
                     with gr.Column():
-                        but0 = gr.Button(i18n("转换"), variant="primary")
+                        but0 = gr.Button(i18n("Conversion"), variant="primary")
                         with gr.Row():
                             vc_output1 = gr.Textbox(label=i18n("Output"))
                             vc_output2 = gr.Audio(label=i18n("Output Audio"))
@@ -974,12 +974,12 @@ with gr.Blocks(title="♡ RavenCutie21") as app:
                 with gr.Row():
                     with gr.Column():
                         vc_transform1 = gr.Number(
-                            label=i18n("Semitone Adjustment"),
+                            label=i18n("Transpose -12, 12 are octaves"),
                             value=0
                         )
                         opt_input = gr.Textbox(label=i18n("Output"), value="opt")
                         file_index3 = gr.Textbox(
-                            label=i18n("Path to feature retrieval, if empty uses dropdown"),
+                            label=i18n("Path to index"),
                             value="",
                             interactive=True,
                         )
@@ -1037,7 +1037,7 @@ with gr.Blocks(title="♡ RavenCutie21") as app:
                         filter_radius1 = gr.Slider(
                             minimum=0,
                             maximum=7,
-                            label=i18n(">=3 uses the median filter for the results of harvest's pitch recognition"),
+                            label=i18n(">=3 apply median filter to the harvested pitch results"),
                             value=3,
                             step=1,
                             interactive=True,
@@ -1045,7 +1045,7 @@ with gr.Blocks(title="♡ RavenCutie21") as app:
                         index_rate2 = gr.Slider(
                             minimum=0,
                             maximum=1,
-                            label=i18n("Search Index Rate"),
+                            label=i18n("Index Ratio"),
                             value=0.40,
                             interactive=True,
                         )
