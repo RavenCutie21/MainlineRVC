@@ -633,7 +633,7 @@ def change_f0_method(f0method8):
 
 with gr.Blocks(title="♡ RavenCutie21") as app:
     gr.Markdown("♡ Raven UI")
-    gr.Markdown(value=i18n("Guide Recommendations: (RavenCutie21's) https://rentry.co/TrainingVoiceModels + (Litsa_the_dancer's) https://rentry.org/RVC_making-models + (Diablofx's) https://docs.google.com/document/d/198c208LCt2F9f2C_WyAKULXlC9aCVNokNMo7d5mmgg0/edit#heading=h.mw49hr80ez42"))
+    gr.Markdown(value=i18n("Guide Recommendations: (RavenCutie21's) https://rentry.co/TrainingVoiceModels + (Litsa_the_dancer's) https://rentry.org/RVC_making-models + (Diablofx's) https://rentry.org/diablofxhowtoai"))
     with gr.Tabs():
         with gr.TabItem(i18n("Train")):
             gr.Markdown(value=i18n(""))
