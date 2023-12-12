@@ -4,6 +4,9 @@ Please download the latest mainline rvc prepackaged binary from here https://git
 
 99.9999% translated, removed ton of changes, added 3 guide recommendations to the top, train tab default, and all defaults changed.
 
+# Installation
+Clone repo, or download both files and place them in the initial RVC folder. thats it :3
 
 
-You're free to use this idea as you see fit, but I will be updating this to keep up to date with whatever prebuilt RVC binary exists, until I quit making models.
+# Notice
+You're free to use this idea as you see fit, but I will be updating this to keep up to date with whatever prebuilt RVC binary exists, until I quit making models, just give Credit if you do use it and change stuff.
