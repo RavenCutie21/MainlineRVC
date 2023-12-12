@@ -5,7 +5,7 @@ Please download the latest mainline rvc prepackaged binary from here https://git
 99.9999% translated, removed ton of changes, added 3 guide recommendations to the top, train tab default, and all defaults changed.
 
 # Installation
-Clone repo, or download both files and place them in the initial RVC folder. thats it :3
+Download both files (or clone repo) and place them in the initial RVC folder (or extract them there). thats it :3
 
 
 # Notice
