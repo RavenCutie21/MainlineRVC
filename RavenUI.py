@@ -642,7 +642,7 @@ with gr.Blocks(title="♡ RavenCutie21") as app:
                 sr2 = gr.Radio(
                     label=i18n("Sample Rate"),
                     choices=["32k", "40k", "48k"],
-                    value="48k",
+                    value="32k",
                     interactive=True,
                 )
                 if_f0_3 = gr.Radio(
@@ -787,12 +787,12 @@ with gr.Blocks(title="♡ RavenCutie21") as app:
                 with gr.Row():
                     pretrained_G14 = gr.Textbox(
                         label=i18n("Pretrained G"),
-                        value="assets/pretrained_v2/f0G48k.pth",
+                        value="assets/pretrained_v2/f0G32k.pth",
                         interactive=True,
                     )
                     pretrained_D15 = gr.Textbox(
                         label=i18n("Pretrained D"),
-                        value="assets/pretrained_v2/f0D48k.pth",
+                        value="assets/pretrained_v2/f0D32k.pth",
                         interactive=True,
                     )
                     sr2.change(
